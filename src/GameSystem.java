@@ -137,9 +137,11 @@ public class GameSystem implements Runnable, Observer {
 			}
 		} else if (GameOption == 0) {
 			colorchoice.update();
-			if (choice != 0 && choice2 != 0)
+			if (GameClient.getInstance().myReady
+					&& GameClient.getInstance().otherReady) {
 				player1 = new Paddle(0, 270, choice);
-			player2 = new Paddle2(954, 270, choice2);
+				player2 = new Paddle2(954, 270, choice2);
+			}
 		} else if (GameOption == 1) {
 			player1.update();
 			player2.update();

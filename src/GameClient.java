@@ -15,7 +15,7 @@ public class GameClient extends Observable implements Runnable {
 				: thisInstance;
 	}
 
-	public static String SERVER = "localhost";
+	public static String SERVER = "STAALHALL25";
 	public static int PORT = 9000;
 
 	float me;
